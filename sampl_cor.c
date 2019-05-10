@@ -127,19 +127,13 @@ if((fabs(mean)>0.1 && number>10 ) || fabs(dif) >10){
   gettimeofday(&now, NULL);
   temp.tv_sec=periodic.tv_sec;
   temp.tv_usec=periodic.tv_usec;
-    add(&temp, period);
+  add(&temp, period);
 
 
    float difnext = (temp.tv_sec - now.tv_sec) * 1000.0;      // sec to ms
-    difnext += (temp.tv_usec - now.tv_usec) / 1000.0;   // us to ms
-  
-
+  difnext += (temp.tv_usec - now.tv_usec) / 1000.0;   // us to ms
   long offs=(difnext*1000);
-  if(dif>0){
-	offs=offs -(dif)*1000;
-	}else{
-	offs= offs+(dif)*1000;
-	}
+  offs=offs -(dif)*1000;
   t.it_value.tv_sec = offs / 1000000;
   t.it_value.tv_usec = offs % 1000000;
 
