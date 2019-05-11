@@ -133,7 +133,7 @@ if((fabs(mean)>0.1 && number>10 ) || fabs(dif) >10){
    float difnext = (temp.tv_sec - now.tv_sec) * 1000.0;      // sec to ms
   difnext += (temp.tv_usec - now.tv_usec) / 1000.0;   // us to ms
   long offs=(difnext*1000);
-  offs=offs -(dif)*1000;
+  
   t.it_value.tv_sec = offs / 1000000;
   t.it_value.tv_usec = offs % 1000000;
 
