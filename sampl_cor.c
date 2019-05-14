@@ -156,7 +156,6 @@ number=0;
  }
  printf("min %f \n",min);
  printf("max %f \n",max);
- printf("mean %f \n",mean);
 
 printf("Number of timer resets %d",set);
 
