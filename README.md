@@ -1,8 +1,10 @@
 # Embeeded-Systems
-Implementation of a periodic task and report of test runs
+Implementation of a network system and report of test runs
 on the Raspberrypi Zero W
 
 # Contents
-Embeeded_Homework.pdf Report and analysis of the implementations
-sampl.c  Periodic task no time correction
-sampl_cor.c Periodic task with time correction
+Report.pdf Report and analysis of the implementations
+
+periodicMessaging.c  Periodic generation of messages
+
+randomtime.c Random generation of messages 1sec<time<2sec
