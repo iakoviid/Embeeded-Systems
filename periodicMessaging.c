@@ -11,7 +11,7 @@
 #include <signal.h> 
 #define PORT 2288
 #define BUFFER_SIZE 2000
-#define AM 8789
+#define AM 8952
 #define NSEC_PER_SEC 1000000000ULL
 #define MAX_PENDING_REQS 100
 /*Global Variables message buffer and device-list*/

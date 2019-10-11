@@ -11,7 +11,7 @@
 #include <signal.h> 
 #define PORT 2288
 #define BUFFER_SIZE 2000
-#define AM 8789
+#define AM 8952
 #define NSEC_PER_SEC 1000000000ULL
 #define MAX_PENDING_REQS 100
 /*Global Variables message buffer and device-list*/
@@ -137,11 +137,11 @@ int main(int argc, char const *argv[])
 	//clock_gettime(CLOCK_REALTIME, &r);
 	//timespec_add_us(&r, 1000);
 	/*Until time runs out*/
-	long period=(rand()%5)*6000+60000;
+	 period=(rand()%5)*6000+60000;
 	struct timeval start;
 	gettimeofday(&start, NULL);
 	
-	while(s>N){
+	while(s<N){
 		//clock_nanosleep(CLOCK_REALTIME, TIMER_ABSTIME, &r, NULL);
 		//timespec_add_us(&r, period*1000);
 
@@ -152,7 +152,10 @@ int main(int argc, char const *argv[])
   	dif += (now.tv_usec - prev.tv_usec) / 1000.0;   // us to ms 
 	float dif2 = (now.tv_sec - start.tv_sec) * 1000.0;      // sec to ms
   	dif2 += (now.tv_usec - start.tv_usec) / 1000.0;   // us to ms 
-	if(dif2>t*1000){s=N;}
+	if(dif2>t*1000){s=N;
+
+
+	}
 	if(dif>period){
 		fprintf(fp, "%f\n",dif);
 		gettimeofday(&prev, NULL);
